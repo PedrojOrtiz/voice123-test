@@ -1,27 +1,17 @@
-# Busqueda
+# Busqueda API Voice 123
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.1.2.
+El proyecto fue desarrollado en [Angular CLI](https://github.com/angular/angular-cli) version 11.1.2.
+La API de búsqueda Voice123 está disponible en
+https://api.sandbox.voice123.com/providers/search/?service=voice_over&keywords=search%20text&page=1
 
-## Development server
+## Registro de trabajo
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+He trabajado en este mini-proyecto desde la mañana del presente domingo, lo he implementado con bootstrap en la parte de la vista y he marcado como finalizado con el ultimo commit.
 
-## Code scaffolding
+## Futuras mejoras y recomendaciones
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Siempre hay como mejorar un proyecto de software, así que en este caso es posible recolectar mucha más información que puede ser de utilidad para los usiarios de la aplicación.
+Los métodos implementados fueron analizados previamente para tener un correcto funcionamiento, pero eso no significa que sean definitivos, se puede hacer más eficiente el proceso de búsqueda.
 
-## Build
+Gracias.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.

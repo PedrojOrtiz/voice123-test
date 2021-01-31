@@ -1,0 +1,37 @@
+<section>
+
+    <form [formGroup] = "searchForm">
+        <label>
+            <input type="text" (keyup)="searchTerm.next($event)" formControlName="search" placeholder="Search repos..." />
+
+            <div *ngIf="loading">
+                <p class="search-message">Buscando</p>
+                <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+            </div>
+        </label>
+    </form>
+
+    <div *ngIf="searchResults">
+
+        <div class="results">
+
+            <div class="res" *ngFor="let result of paginationElements | paginate: {itemsPerPage: 6, currentPage: page}">
+                <div>
+
+                    
+
+                    <h2><a href="{{result.username}}"></a></h2>
+
+                </div>
+            </div>
+
+        </div>
+        <pagination-controls (pageChange)="page = $event"></pagination-controls>
+    </div>
+
+    <div *ngIf="errorMessage" class="errorMessage">
+        <h2>Error</h2>
+        <p class="error">{{errorMessage}}</p>
+    </div>
+
+</section>

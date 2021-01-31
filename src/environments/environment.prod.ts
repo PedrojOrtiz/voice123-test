@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  baseUrlAPI: 'https://api.sandbox.voice123.com/providers/search/'
 };

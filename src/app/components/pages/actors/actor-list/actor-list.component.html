@@ -1,0 +1,35 @@
+<div class="row">
+
+    <div class="col-xs-12 col-sm-6 col-md-4" *ngFor="let actor of providers | paginate: { itemsPerPage: 3, currentPage: p }">
+        <div class="card">
+            <div class="image">
+                <a [routerLink] = "['/actor-details', actor.id]">
+                
+                    <img
+                        [src]="actor.user.picture_small"
+                        [alt]="actor.user.name"
+                        class="card-img-top"
+                    />
+
+                </a>
+            </div>
+            <div class="card-inner">
+                <div class="header">
+                    <a (click)="goToLink(actor.user.username)">
+                        <h2>{{actor.user.name}}</h2>
+                    </a>
+                    <h4 class="text-muted">{{actor.headline}}</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-xs-12 col-sm-12 col-md-12 mt-5 container-notFound" *ngIf="providers.length <= 0">
+        <p>Sin Resultados..</p>
+        
+    </div>
+</div>
+
+<div class="row">
+    <pagination-controls (pageChange)="p = $event"></pagination-controls>
+</div>
